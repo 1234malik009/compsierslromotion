@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
 }
-
+.body{
+  background-image: url(./images/campsiersl-backgroundimage.png);
+  z-index: 2;
+}
 .header-container{
   height: 200px;
   background-color: rgb(22, 22, 49);
@@ -11,6 +14,7 @@
 }
 .banner-container{
   display: flex;
+  background-color: transparent;
   flex-direction: column;
   width: 100%;
   height: auto;
@@ -27,14 +31,20 @@
   margin-top: 10px;
 }
 h1{
-  /* color: white; */
+  color: white;
   font-size: 110px;
   margin-top: 60px;
 }
-.dropdown{
-  height: 50px;
+.dropdown-button{
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 p{
+  color: white;
   font-size: 30px;
   font-weight: bold;
 }

@@ -1,54 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, Tooltip } from 'antd';
-const handleButtonClick = (e) => {
-  message.info('Click on left button.');
-  console.log('click left button', e);
+const googleTranslateElementInit = () => {
+  new window.google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      autoDisplay: false,
+    },
+    'google_translate_element'
+  );
 };
-const handleMenuClick = (e) => {
-  message.info('Click on menu item.');
-  console.log('click', e);
+
+const App = () => {
+  useEffect(() => {
+    var addScript = document.createElement('script');
+    addScript.setAttribute('src', 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+    document.body.appendChild(addScript);
+  }, []);
+
+  const handleTranslateClick = () => {
+    googleTranslateElementInit(); // Call the initialization function when the div is clicked
+  };
+
+  return (
+    <button title='Button' className='translate' id='google_translate_element'  onClick={handleTranslateClick}>
+      Click to Translate
+    </button>
+    
+  );
 };
-const items = [
-  {
-    label: '1st menu item',
-    key: '1',
-    icon: <UserOutlined />,
-  },
-  {
-    label: '2nd menu item',
-    key: '2',
-    icon: <UserOutlined />,
-  },
-  {
-    label: '3rd menu item',
-    key: '3',
-    icon: <UserOutlined />,
-    danger: true,
-  },
-  {
-    label: '4rd menu item',
-    key: '4',
-    icon: <UserOutlined />,
-    danger: true,
-    disabled: true,
-  },
-];
-const menuProps = {
-  items,
-  onClick: handleMenuClick,
-};
-const App = () => (
-  <Space wrap>
-    <Dropdown menu={menuProps} className='drop-down'>
-      <Button>
-        <Space>
-          Choose Langauge
-          <DownOutlined />
-        </Space>
-      </Button>
-    </Dropdown>
-  </Space>
-);
+
 export default App;
