@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './components/header';
 import Banner from './components/banner';
-import DropdownButton from 'antd/es/dropdown/dropdown-button';
+import Posts from './Posts/posts'
+
 
 
 
@@ -11,6 +12,8 @@ function App() {
   <div className='body'>
           <Header/>
           <Banner/>
+          <Posts/>
+          
           
   </div>   
   );

@@ -4,7 +4,7 @@
 }
 .body{
   background-image: url(./images/campsiersl-backgroundimage.png);
-  z-index: 2;
+  background-size: cover;
 }
 .header-container{
   height: 200px;
@@ -47,4 +47,9 @@ p{
   color: white;
   font-size: 30px;
   font-weight: bold;
+}
+.translion-2{
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }

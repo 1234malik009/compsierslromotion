@@ -1,6 +1,7 @@
 
-import DropdownButton from 'antd/es/dropdown/dropdown-button';
+// import DropdownButton from 'antd/es/dropdown/dropdown-button';
 import Image from '../images/We Are Open-Campsie RSL.jpg';
+import Trans from './trans';
 
 const banner = () => {
   return (
@@ -11,7 +12,8 @@ const banner = () => {
     title="My Banner Image" 
     alt="My Banner Image" />
     
-    <DropdownButton className='dropdown-button' overlayClassName='dropdown-overlay'/>
+    {/* <DropdownButton className='dropdown-button' overlayClassName='dropdown-overlay'/> */}
+    <Trans/>
     <h1>
     CAMPSIE RSL
     </h1>
