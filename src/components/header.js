@@ -1,5 +1,6 @@
+import React from 'react';
 import { Layout, Space } from 'antd';
-import Image from '../images/Campsie RSL Logo.jpg';
+
 
 const { Header } = Layout;
 
@@ -9,7 +10,7 @@ const headerStyle: React.CSSProperties = {
   height: 100,
   paddingInline: 50,
   lineHeight: '64px',
-  backgroundColor: '#0e3360',
+  backgroundColor: '#0b1e33',
 };
 
 
@@ -18,10 +19,10 @@ const App: React.FC = () => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
     <Layout>
       <Header style={headerStyle}>
-    <img src={Image} className='header-image' alt="" />
+      <img src={require('../components/home.jpg')} alt="Logo-Image" height={100} />
       </Header>
     </Layout>
-  </Space>
-);
+    </Space>
+    );
 
 export default App;

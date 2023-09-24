@@ -1,55 +1,26 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .body{
-  background-image: url(./images/campsiersl-backgroundimage.png);
+  height: 100vh;
+  background-image: url(./background-Image.jpg);
   background-size: cover;
 }
-.header-container{
-  height: 200px;
-  background-color: rgb(22, 22, 49);
-  z-index: 1;
-
+.banner-image-overlay{
+  background: transparent;
 }
-.banner-container{
-  display: flex;
-  background-color: transparent;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  /* justify-content: center; */
-  align-items: center;
-}
-.banner-image{
-  width: 780px;
-  margin-top: 70px;
-}
-.header-image{
-  height: 85px;
-  margin-left: 20px;
-  margin-top: 10px;
+.ant-layout {
+  background-color: transparent !important;
 }
 h1{
-  color: white;
-  font-size: 110px;
-  margin-top: 60px;
-}
-.dropdown-button{
+  font-size: 100px;
   margin-top: 50px;
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 p{
-  color: white;
-  font-size: 30px;
+  font-size: 36px ;
   font-weight: bold;
-}
-.translion-2{
-  display: flex;
-  width: 100%;
-  justify-content: center;
 }
