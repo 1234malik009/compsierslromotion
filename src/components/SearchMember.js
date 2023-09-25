@@ -8,7 +8,7 @@ const SearchMember = () => {
   };
 
   return (
-    <Form onFinish={handleSubmit} style={{marginTop: '20px', marginLeft: '-100px'}}>
+    <Form onFinish={handleSubmit} style={{marginTop: '20px'}}>
       <Form.Item
         label="Member No"
         name="memberNo"
@@ -41,7 +41,7 @@ const SearchMember = () => {
         />
       </Form.Item>
       <Form.Item >
-        <Button type="primary" htmlType="submit" style={{marginLeft: '100px'}}>
+        <Button type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>

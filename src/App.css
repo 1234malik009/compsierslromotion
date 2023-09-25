@@ -32,3 +32,18 @@ p{
   }
   
 }
+
+/* Hide "Powered by" text */
+#google-translate-widget span a {
+  display: none;
+}
+
+.goog-te-gadget{
+  color: transparent !important;
+  margin-top: 55px !important;
+}
+
+.goog-te-combo{
+    padding: 4px;
+    border-radius: 6px;
+}
