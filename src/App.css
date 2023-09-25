@@ -24,3 +24,11 @@ p{
   font-size: 36px ;
   font-weight: bold;
 }
+
+@media screen and (max-width: "1080px") {
+
+  .ant-image-mask{
+    width: 100px ;
+  }
+  
+}

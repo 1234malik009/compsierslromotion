@@ -77,7 +77,7 @@ const MainHeader = () => {
             <Select
             showSearch
             size='medium'
-            style={{ width: '100px' , height: '30px', marginTop: '10px'}}
+            style={{ width: '150px' , height: '30px', marginTop: '10px'}}
             // placeholder="Choose Language"
             title='Choose Language'
             optionFilterProp="children"

@@ -25,7 +25,7 @@ const MainContent = () => {
     >
       <Layout>
         <Content style={contentStyle}>
-          <Image src={require('../Banner.jpg')} height={'100%'} style={{ marginTop: '50px' }} />
+          <Image className='banner-image' src={require('../Banner.jpg')} height={'100%'} style={{ marginTop: '50px' }} />
           <h1 style={{fontSize: '50px', marginTop: '40px'}}>CAMPSIE RSL PROMOTION</h1>
           <p style={{fontSize: '30px', fontWeight: '400', marginTop: '5px'}}>PUTTING OUR COMMUNITY FIRST</p>
           {/* Show Language Component If Language is not selected */} 
