@@ -1,5 +1,5 @@
 import React from 'react';
-import {DatePicker, Button, Form, InputNumber } from 'antd';
+import {DatePicker, Button, Form, InputNumber, Layout } from 'antd';
 
 const SearchMember = () => {
 
@@ -8,9 +8,10 @@ const SearchMember = () => {
   };
 
   return (
-    <Form onFinish={handleSubmit} style={{marginTop: '20px'}}>
+    <Layout>
+    <Form className='dob-form' onFinish={handleSubmit} style={{marginTop: '20px'}}>
+    <p3 style={{color:"white", fontSize:"18px"}}>Mumber Number</p3>
       <Form.Item
-        label="Member No"
         name="memberNo"
         rules={[
           {
@@ -24,8 +25,8 @@ const SearchMember = () => {
           placeholder="Enter Member No"
         />
       </Form.Item>
+      <p3 style={{color:"white", fontSize:"18px"}}>Date Of Birth</p3>
       <Form.Item
-        label="Date of Birth"
         name="dob"
         rules={[
           {
@@ -36,7 +37,7 @@ const SearchMember = () => {
       >
         <DatePicker
           style={{ width: '400px' }}
-          placeholder="Choose Date"
+          placeholder="DD-MM-YYYY"
           format="DD-MM-YYYY"
         />
       </Form.Item>
@@ -46,6 +47,7 @@ const SearchMember = () => {
         </Button>
       </Form.Item>
     </Form>
+    </Layout>
   );
 };
 

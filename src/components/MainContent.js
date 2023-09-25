@@ -1,6 +1,6 @@
 import { Image, Layout, Space } from 'antd';
-
 import SearchMember from './SearchMember';
+
 
 
 const { Content } = Layout;
@@ -29,7 +29,7 @@ const MainContent = () => {
           <h1 style={{fontSize: '50px', marginTop: '40px'}}>CAMPSIE RSL PROMOTION</h1>
           <p style={{fontSize: '30px', fontWeight: '400', marginTop: '5px'}}>PUTTING OUR COMMUNITY FIRST</p>
           {/* Show Language Component If Language is not selected */} 
-          <SearchMember/> 
+        <SearchMember/>
         </Content>
       </Layout>
     </Space>
