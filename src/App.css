@@ -24,11 +24,20 @@ p{
   font-size: 36px ;
   font-weight: bold;
 }
+.ant-form{
+  margin-left: 20px;
+}
 
 @media screen and (max-width: "1080px") {
 
   .ant-image-mask{
     width: 100px ;
+  }
+  
+}
+@media screen and (max-width: "768px") {
+  .warning-massege{
+    font-size: 15px !important;
   }
   
 }
@@ -46,4 +55,33 @@ p{
 .goog-te-combo{
     padding: 4px;
     border-radius: 6px;
+}
+.mamber-detail{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+}
+.ant-card{
+  border-radius: 0px;
+}
+.ant-typography{
+  color: white;
+}
+.ant-typography {
+  color: white !important;
+}
+.ant-card {
+  background-color: #00213a;
+}
+.text-green {
+  color: green !important;
+}
+/* .text-center {
+  text-align: center !important;
+} */
+.ant-row{
+  margin-top: 10px !important;
 }

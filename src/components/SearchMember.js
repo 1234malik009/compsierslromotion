@@ -1,16 +1,21 @@
 import React from 'react';
-import {DatePicker, Button, Form, InputNumber, Layout } from 'antd';
+import { DatePicker, Button, Form, InputNumber, Typography } from 'antd';
 
-const SearchMember = ({setMemberFetched}) => {
+const SearchMember = ({setMemberFetched,setMemberData}) => {
 
   const handleSubmit = (data) => {
-      console.log(data)
-      setMemberFetched(true)
+    const allValues = {
+        mememberNo:data.memberNo,
+        dob:new Date(data.dob).toLocaleString()
+      }
+      console.log(allValues);
+      setMemberData(allValues)
+      setMemberFetched(false)
   };
 
   return (
-    <Form className='dob-form' onFinish={handleSubmit} style={{marginTop: '20px'}}>
-      <p3 style={{color:"white", fontSize:"18px"}}>Member Number</p3>
+    <Form  onFinish={handleSubmit} style={{marginTop: '20px'}}>
+    <Typography.Text style={{color:"white", fontSize:"20px"}}>Member No</Typography.Text>
       <Form.Item
           name="memberNo"
           rules={[
@@ -25,7 +30,7 @@ const SearchMember = ({setMemberFetched}) => {
             placeholder="Enter Member No"
           />
         </Form.Item>
-        <p3 style={{color:"white", fontSize:"18px"}}>Date Of Birth</p3>
+        <Typography.Text style={{color:"white", fontSize:"20px"}}>Date Of Birth</Typography.Text>
         <Form.Item
           name="dob"
           rules={[
@@ -43,7 +48,7 @@ const SearchMember = ({setMemberFetched}) => {
         </Form.Item>
         <Form.Item >
           <Button type="primary" htmlType="submit">
-            Submit
+            Next
           </Button>
         </Form.Item>
     </Form>
