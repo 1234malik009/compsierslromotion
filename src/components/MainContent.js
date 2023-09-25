@@ -1,7 +1,7 @@
 import { Image, Layout, Space } from 'antd';
 import SearchMember from './SearchMember';
-
-
+import { useState } from 'react';
+import MemberDetail from './MemberDetail';
 
 const { Content } = Layout;
 
@@ -13,6 +13,7 @@ const contentStyle = {
 
 const MainContent = () => {
 
+  const [isMemberFetched, setMemberFetched] = useState(false)
 
   return (
     <Space
@@ -29,7 +30,7 @@ const MainContent = () => {
           <h1 style={{fontSize: '50px', marginTop: '40px'}}>CAMPSIE RSL PROMOTION</h1>
           <p style={{fontSize: '30px', fontWeight: '400', marginTop: '5px'}}>PUTTING OUR COMMUNITY FIRST</p>
           {/* Show Language Component If Language is not selected */} 
-        <SearchMember/>
+          {(isMemberFetched == false) ? <SearchMember setMemberFetched={setMemberFetched}/> : <MemberDetail/>}
         </Content>
       </Layout>
     </Space>
