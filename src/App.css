@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .body{
-  height: 100vh;
+  height: auto;
   background-image: url(./background-Image.jpg);
   background-size: cover;
 }
