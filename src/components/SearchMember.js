@@ -15,9 +15,10 @@ const SearchMember = ({setMemberFetched,setMemberData}) => {
 
   return (
     <div className='member-search-div'>
-    <Card className='member-Search' style={{width:'65%', textAlign:'start', border:'none'}} >
-    <Form  onFinish={handleSubmit} style={{marginTop: '20px'}}>
-    <Typography.Title className='member-search-title' style={{marginTop:'-15px', marginBottom:'0px'}}>Renew Your Membership</Typography.Title>
+    <Card className='member-Search' style={{width:'70%', border:'none'}} >
+    <Typography.Title className='member-search-title1' style={{fontSize:'50px', marginBottom:'100px', width:'40%', marginLeft:'28%', marginTop:'0px'}}>Renew Membership</Typography.Title>
+    <Form  onFinish={handleSubmit} style={{marginTop: '20px', textAlign:'start'}}>
+    <Typography.Title className='member-search-title' style={{marginTop:'-15px', marginBottom:'0px', fontSize:'30px'}}>Renew Your Membership</Typography.Title>
     <Typography.Text style={{fontSize:'20px'}}>Firstly lets check the status of your fairfeild membership.</Typography.Text>
     <br /><br /><br /><Typography.Text style={{color:"white", fontSize:"16px"}}>Member No</Typography.Text>
       <Form.Item
@@ -52,7 +53,7 @@ const SearchMember = ({setMemberFetched,setMemberData}) => {
         </Form.Item>
         <Form.Item >
           <Button type="primary" htmlType="submit">
-            Next
+          Search
           </Button>
         </Form.Item>
     </Form>
