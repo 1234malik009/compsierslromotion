@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
-import { Image, Layout, Space, Select } from 'antd';
-import {useState} from 'react';
+import React from 'react';
+import { Image, Layout, Space } from 'antd';
 import GoogleTranslater from './GoogleTranslator';
-const { Option } = Select;
 const { Header } = Layout;
 
 const headerStyle = {
@@ -22,7 +20,7 @@ const MainHeader = () => {
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
       <Layout>
         <Header style={headerStyle}>
-            <Image src={require('../assets/images/home.jpg')} height={100} />
+            <Image src={require('../assets/images/home.jpg')} height={90} style={{objectFit:'cover'}} />
             <GoogleTranslater/>
         </Header>
       </Layout>

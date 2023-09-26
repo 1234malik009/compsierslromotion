@@ -18,7 +18,7 @@ function GoogleTranslater() {
         'google-translate-widget' // The ID of the container element
       );
     };
-      
+
     return () => {
       // Clean up by removing the script and the callback function
       document.body.removeChild(script);

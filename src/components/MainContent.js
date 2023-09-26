@@ -1,4 +1,4 @@
-import { Form, Image, Layout, Space } from 'antd';
+import { Image, Layout, Space, Typography} from 'antd';
 import SearchMember from './SearchMember';
 import { useState } from 'react';
 import MemberMain from './MemberMain';
@@ -27,10 +27,9 @@ const MainContent = () => {
       <Layout>
         <Content style={contentStyle}>
           <Image className='banner-image' src={require('../Banner.jpg')} height={'100%'} style={{ marginTop: '50px' }} />
-          <h1 style={{fontSize: '50px', marginTop: '40px'}}>CAMPSIE RSL PROMOTION</h1>
-          <p style={{fontSize: '30px', fontWeight: '400', marginTop: '5px'}}>PUTTING OUR COMMUNITY FIRST</p>
-          {/* Show Language Component If Language is not selected */} 
-          {!isMemberFetched ? <SearchMember setMemberFetched={setMemberFetched} setMemberData={setMemberData}/> : <MemberMain/> }
+          <Typography.Title level={1} className={'hero__title text-play'}>CAMPSIE RSL</Typography.Title>
+          <Typography.Text className={'text-inter hero__para'}>PUTTING OUR COMMUNITY FIRST</Typography.Text>
+          {!isMemberFetched ? <SearchMember setMemberFetched={setMemberFetched} memberData={memberData} setMemberData={setMemberData}/> : <MemberMain/> }
         </Content>
       </Layout>
     </Space>

@@ -1,5 +1,5 @@
 import React from 'react';
-import MemberDetail from './MemberDetail'; // Import the MemberDetail component
+import MemberDetail from './MemberDetail';
 
 function MemberMain() {
   const memberData = {
@@ -15,7 +15,7 @@ function MemberMain() {
 
   return (
     <div className="App">
-      <MemberDetail memberData={memberData} /> {/* Render the MemberDetail component */}
+      <MemberDetail memberData={memberData} />
     </div>
   );
 }
