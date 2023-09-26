@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image, Layout, Space } from 'antd';
-import GoogleTranslater from './GoogleTranslator';
 const { Header } = Layout;
 
 const headerStyle = {
@@ -21,7 +20,6 @@ const MainHeader = () => {
       <Layout>
         <Header style={headerStyle}>
             <Image src={require('../assets/images/home.jpg')} height={90} style={{objectFit:'cover'}} />
-            <GoogleTranslater/>
         </Header>
       </Layout>
     </Space>
