@@ -1,5 +1,5 @@
 import React from 'react';
-import { DatePicker, Button, Form, InputNumber, Typography } from 'antd';
+import { DatePicker, Button, Form, InputNumber, Typography, Card } from 'antd';
 
 const SearchMember = ({setMemberFetched,setMemberData}) => {
 
@@ -14,8 +14,12 @@ const SearchMember = ({setMemberFetched,setMemberData}) => {
   };
 
   return (
+    <div className='member-search-div'>
+    <Card className='member-Search' style={{width:'65%', textAlign:'start', border:'none'}} >
     <Form  onFinish={handleSubmit} style={{marginTop: '20px'}}>
-    <Typography.Text style={{color:"white", fontSize:"20px"}}>Member No</Typography.Text>
+    <Typography.Title className='member-search-title' style={{marginTop:'-15px', marginBottom:'0px'}}>Renew Your Membership</Typography.Title>
+    <Typography.Text style={{fontSize:'20px'}}>Firstly lets check the status of your fairfeild membership.</Typography.Text>
+    <br /><br /><br /><Typography.Text style={{color:"white", fontSize:"16px"}}>Member No</Typography.Text>
       <Form.Item
           name="memberNo"
           rules={[
@@ -26,11 +30,11 @@ const SearchMember = ({setMemberFetched,setMemberData}) => {
           ]}
         >
           <InputNumber
-            style={{ width: '400px' }}
+            style={{ width: '90%' }}
             placeholder="Enter Member No"
           />
         </Form.Item>
-        <Typography.Text style={{color:"white", fontSize:"20px"}}>Date Of Birth</Typography.Text>
+        <Typography.Text style={{color:"white", fontSize:"16px"}}>Date Of Birth</Typography.Text>
         <Form.Item
           name="dob"
           rules={[
@@ -41,7 +45,7 @@ const SearchMember = ({setMemberFetched,setMemberData}) => {
           ]}
         >
           <DatePicker
-            style={{ width: '400px' }}
+            style={{ width: '90%' }}
             placeholder="DD-MM-YYYY"
             format="DD-MM-YYYY"
           />
@@ -52,6 +56,8 @@ const SearchMember = ({setMemberFetched,setMemberData}) => {
           </Button>
         </Form.Item>
     </Form>
+    </Card>
+    </div>
   );
 };
 
