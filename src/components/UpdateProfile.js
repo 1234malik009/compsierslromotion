@@ -1,4 +1,4 @@
-import { Input , Card, Form, Typography, Button, InputNumber, Row } from "antd"
+import { Input , Card, Form, Typography, Button, InputNumber, Row,Col } from "antd"
 
 
 
@@ -23,6 +23,8 @@ const UpdateProfile = () => {
    </div>
    <div className="parent">
    <Row>
+   <Col xs={12} md={12}>
+
     
    <Form.Item 
     name='firstName'
@@ -31,8 +33,10 @@ const UpdateProfile = () => {
       
       <Input size="large"  placeholder="First Name" className=" item-feild input-text" />
       </Form.Item>
-   </Row>
-    <Row>
+   </Col>
+
+   <Col>
+
 
       <Form.Item
       name='lastName'
@@ -41,7 +45,8 @@ const UpdateProfile = () => {
       
       <Input size="large" placeholder="Last Name" className=" item-feild input-text" />
       </Form.Item>
-    </Row>
+   </Col>
+   </Row>
    </div>
    <div style={{textAlign:'start'}}>
 
