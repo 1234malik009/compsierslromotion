@@ -86,6 +86,10 @@
     color: white;
 }
 
+.ant-form-item-label > label{
+    color: white !important;
+}
+
 .ant-typography {
     color: white !important;
 }
