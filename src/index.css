@@ -30,11 +30,12 @@ code {
 }
 .parent{
     display: flex;
+    margin: 0px !important;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .item-feild{
-    width: 49%;
+   width: 340px;
     gap: 5px;
 }
 .text-hd{
