@@ -3,6 +3,7 @@ import SearchMember from './SearchMember';
 import { useState } from 'react';
 import MemberMain from './MemberMain';
 
+
 const { Content } = Layout;
 
 const contentStyle = {
@@ -14,6 +15,7 @@ const contentStyle = {
 const MainContent = () => {
   const [isMemberFetched, setMemberFetched] = useState(false)
   const [memberData, setMemberData] = useState([])
+
 
   return (
     <Space
@@ -30,6 +32,8 @@ const MainContent = () => {
           <Typography.Title level={1} className={'hero__title text-play'}>CAMPSIE RSL</Typography.Title>
           <Typography.Text className={'text-inter hero__para'}>PUTTING OUR COMMUNITY FIRST</Typography.Text>
           {!isMemberFetched ? <SearchMember setMemberFetched={setMemberFetched} memberData={memberData} setMemberData={setMemberData}/> : <MemberMain/> }
+          {/* {showProfile && (<UpdateProfile visible={showProfile} handleOnClick={handleOnClick} handleHideMemberDetail={handleHideMemberDetail}/>)}
+          {hideMemberDetail && (<SearchMember visible={hideMemberDetail} handleOnClick={handleOnClick} handleHideMemberDetail={handleHideMemberDetail}/>)} */}
         </Content>
       </Layout>
     </Space>

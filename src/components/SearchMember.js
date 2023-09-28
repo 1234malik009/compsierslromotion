@@ -17,11 +17,9 @@ const SearchMember = ({setMemberFetched, setMemberData}) => {
         <div>
             <Card style={{maxWidth: '750px', marginInline: 'auto'}} bordered={false}>
                 <Form onFinish={handleSubmit} style={{marginTop: '20px', textAlign: 'start'}}>
-                    <Typography.Title style={{marginBlock: 0}} className='text-slab'>Renew Your
-                        Membership
+                    <Typography.Title style={{marginBlock: 0}} className='text-slab'>Search Member
                     </Typography.Title>
-                    <Typography.Text style={{fontSize: '17px'}} className={'text-inter'}>Firstly lets check the status
-                        of your compsie
+                    <Typography.Text style={{fontSize: '17px'}} className={'text-inter'}>Firstly Search Your Profile Using Member No and Date Of Birth
                         membership.</Typography.Text>
                     <br/><br/><br/><Typography.Text style={{color: "white", fontSize: "16px"}}>Member
                     No</Typography.Text>
