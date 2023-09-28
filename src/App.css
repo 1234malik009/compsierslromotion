@@ -9,6 +9,7 @@
     height: auto;
     background-image: url(./background-Image.jpg);
     background-size: cover;
+    min-height: 100vh;
 }
 
 .banner-image-overlay {

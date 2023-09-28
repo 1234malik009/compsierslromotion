@@ -16,8 +16,8 @@ function GoogleTranslater() {
     window.googleTranslateElementInit = () => {
       new window.google.translate.TranslateElement(
           {
-            pageLanguage: selectedLanguage,  // Set the default language
-            autoDisplay: false, // Disable automatic language detection
+            pageLanguage: selectedLanguage,
+            autoDisplay: false,
           },
           'google-translate-widget' // The ID of the container element
       );

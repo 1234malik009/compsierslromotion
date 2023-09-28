@@ -1,6 +1,6 @@
 import { Image, Layout, Space, Typography } from "antd";
 import SearchMember from "./SearchMember";
-import { useState } from "react";
+import React, { useState} from "react";
 import MemberDetail from "./MemberDetail";
 import UpdateProfile from "./UpdateProfile";
 
@@ -13,6 +13,7 @@ const contentStyle = {
 };
 
 const MainContent = () => {
+
   const [compsieCompState, setCompsieCompState] = useState(0);
   const [memberData, setMemberData] = useState([]);
 
@@ -33,6 +34,7 @@ const MainContent = () => {
             height={"100%"}
             style={{ marginTop: "50px" }}
           />
+
           <Typography.Title level={1} className={"hero__title text-play"}>
             CAMPSIE RSL
           </Typography.Title>

@@ -6,13 +6,14 @@ import GoogleTranslater from "./components/GoogleTranslator";
 
 function App() {
     return (
-        <div className='body'>
-            <MainHeader/>
-            <div style={{position:'absolute',right:'10px',top:'-20px'}}>
-                <GoogleTranslater/>
+            <div className='body'>
+                <MainHeader/>
+                <div style={{position: 'absolute', right: '10px', top: '-20px'}}>
+                    <GoogleTranslater/>
+                </div>
+                <MainContent/>
             </div>
-            <MainContent/>
-        </div>
+
     );
 }
 
