@@ -33,7 +33,7 @@ function TokenPage() {
 		} else {
 			navigate('/not-found')
 		}
-	}, [navigate, params, paramToken])
+	}, [navigate, params.token, tokenStatus])
 
 	return (
 		<div>
