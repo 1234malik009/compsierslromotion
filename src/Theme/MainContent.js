@@ -1,8 +1,8 @@
 import { Image, Layout, Space, Typography } from 'antd'
-import SearchMember from './SearchMember'
+import SearchMember from '../Pages/SearchMember'
 import React, { useState } from 'react'
-import MemberDetail from './MemberDetail'
-import UpdateProfile from './UpdateProfile'
+import MemberDetail from '../Pages/MemberDetail'
+import UpdateProfile from '../Pages/UpdateProfile'
 
 const { Content } = Layout
 

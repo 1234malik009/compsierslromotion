@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import MainContent from './components/MainContent'
-import MainHeader from './components/MainHeader'
+import MainContent from './Theme/MainContent'
+import MainHeader from './MainHeader'
 // import GoogleTranslater from './components/GoogleTranslator'
 import { Route, Routes } from 'react-router-dom'
-import TokenPage from './components/TokenPage'
-import TokenExpiredPage from './components/TokenExpiredPage'
+import TokenPage from './Pages/TokenPage'
+import TokenExpiredPage from './Pages/TokenExpiredPage'
 
 function App() {
 	return (
