@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Card, Col, Row, Typography } from 'antd'
-import UpdateProfile from './UpdateProfile'
-import { Link } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 const memberData = {
 	name: 'Brad Waston',
@@ -15,21 +14,37 @@ const memberData = {
 }
 
 const MemberDetail = ({ setCompsieCompState }) => {
+
+	let navigate = useNavigate();
+
 	const handleSubmit = () => {
 		setCompsieCompState(2)
 	}
-	function generateFakeToken(length = 20) {
+
+	let onContinueClick = () => {
+		let token = generateFakeToken()
+		let tokenData = {
+			"token": token,
+			"status": false
+		}
+		localStorage.removeItem('token')
+		localStorage.setItem('token', JSON.stringify(tokenData))
+		navigate("/"+token)
+
+	}
+
+	let generateFakeToken = () => {
 		let token = ''
 		const characters =
 			'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
-		for (let i = 0; i < length; i++) {
+		for (let i = 0; i < 20; i++) {
 			token += characters.charAt(Math.floor(Math.random() * characters.length))
 		}
 
 		return token
 	}
-	const token = generateFakeToken(20)
+
 	return (
 		<div className="App">
 			<div className="mamber-detail">
@@ -203,16 +218,15 @@ const MemberDetail = ({ setCompsieCompState }) => {
 								{' '}
 								Update Profile
 							</Button>
-							<Link to={`/${token}`}>
-								<Button
-									style={{ margin: '2px' }}
-									className={'text-black'}
-									type="primary"
-									htmlType="submit"
-								>
-									Yes Continue
-								</Button>
-							</Link>
+							<Button
+								onClick={onContinueClick}
+								style={{ margin: '2px' }}
+								className={'text-black'}
+								type="primary"
+								htmlType="submit"
+							>
+								Yes Continue
+							</Button>
 						</div>
 					</Card>
 				</Card>

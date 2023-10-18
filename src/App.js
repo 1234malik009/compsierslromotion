@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.css'
-import MainContent from './components/MainContent'
-import MainHeader from './components/MainHeader'
+import MainContent from './Theme/MainContent'
+import MainHeader from './Theme/MainHeader'
+
 // import GoogleTranslater from './components/GoogleTranslator'
 import { Route, Routes } from 'react-router-dom'
-import TokenPage from './components/TokenPage'
-import TokenExpiredPage from './components/TokenExpiredPage'
+import TokenPage from './Pages/TokenPage'
+import TokenExpiredPage from './Pages/TokenExpiredPage'
+import NotFound from './Pages/not-found'
 
 function App() {
 	return (
@@ -18,6 +20,7 @@ function App() {
 				<Route path="/" element={<MainContent />} />
 				<Route path="/:token" element={<TokenPage />} />
 				<Route path="/token-expired" element={<TokenExpiredPage />} />
+				<Route path="/not-found" element={<NotFound />} />
 			</Routes>
 		</div>
 	)
