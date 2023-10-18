@@ -13,7 +13,7 @@ const contentStyle = {
 }
 
 const MainContent = () => {
-	const [compsieCompState, setCompsieCompState] = useState(1)
+	const [compsieCompState, setCompsieCompState] = useState(0)
 	const [memberData, setMemberData] = useState([])
 
 	return (

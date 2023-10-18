@@ -9,6 +9,7 @@ import TokenPage from './Pages/TokenPage'
 import TokenExpiredPage from './Pages/TokenExpiredPage'
 import NotFound from './Pages/not-found'
 
+
 function App() {
 	return (
 		<div className="body">
@@ -21,6 +22,7 @@ function App() {
 				<Route path="/:token" element={<TokenPage />} />
 				<Route path="/token-expired" element={<TokenExpiredPage />} />
 				<Route path="/not-found" element={<NotFound />} />
+                <Route path="/" element={<button/>}/>
 			</Routes>
 		</div>
 	)
