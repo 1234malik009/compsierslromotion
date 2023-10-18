@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import UpdateProfile from "./UpdateProfile";
-import{Link} from 'react-router-dom'
 
 const memberData = {
   name: "Brad Waston",
@@ -183,11 +182,6 @@ const MemberDetail = ({ setCompsieCompState }) => {
               className="button-container"
               style={{ textAlign: "end", marginTop: "25px" }}
             >
-            <Link to='/Empty'>
-                Yes
-              </Link>
-                
-              
               <Button
                 className={"btn"}
                 style={{ margin: "2px" }}

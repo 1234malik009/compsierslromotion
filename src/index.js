@@ -4,14 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ConfigProvider} from "antd";
-import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
 
-    <React.StrictMode>
         <ConfigProvider theme={{
             token: {
                 colorPrimary: '#fff',
@@ -19,8 +16,6 @@ root.render(
         }}>
             <App/>
         </ConfigProvider>
-    </React.StrictMode>
-    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
