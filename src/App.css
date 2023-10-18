@@ -108,7 +108,7 @@
     text-align: start !important;
 }
 .text-white {
-    text-align: start;
+    color: #fff !important;
 }
 .text-left{
     text-align: left !important;
