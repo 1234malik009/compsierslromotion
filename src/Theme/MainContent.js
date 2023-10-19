@@ -40,12 +40,12 @@ const MainContent = () => {
 					<Typography.Text className={'text-inter hero__para'}>
 						PUTTING OUR COMMUNITY FIRST
 					</Typography.Text>
-					{compsieCompState == 0 ? (
+					{compsieCompState === 0 ? (
 						<SearchMember
 							setCompsieCompState={setCompsieCompState}
 							setMemberData={setMemberData}
 						/>
-					) : compsieCompState == 1 ? (
+					) : compsieCompState === 1 ? (
 						<MemberDetail setCompsieCompState={setCompsieCompState} />
 					) : (
 						<UpdateProfile setCompsieCompState={setCompsieCompState} />

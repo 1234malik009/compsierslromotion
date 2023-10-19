@@ -34,7 +34,7 @@ function TokenPage() {
 	return (
 		<div className="space__custom">
 		<img src={TokenImage} style={{ maxWidth: '300px' }} alt="" ></img>
-			<Typography.Title className='text-slab ' level={1} >Your Token is -:{paramToken}</Typography.Title>
+			<Typography.Title className='text-slab text-center' level={1} >Your Token is -:{paramToken}</Typography.Title>
 			
 		</div>
 	)

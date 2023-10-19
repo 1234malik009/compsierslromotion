@@ -3,7 +3,7 @@ import './App.css'
 import MainContent from './Theme/MainContent'
 import MainHeader from './Theme/MainHeader'
 
-// import GoogleTranslater from './components/GoogleTranslator'
+import GoogleTranslater from './components/GoogleTranslator'
 import { Route, Routes } from 'react-router-dom'
 import TokenPage from './Pages/TokenPage'
 import TokenExpiredPage from './Pages/TokenExpiredPage'
@@ -14,9 +14,9 @@ function App() {
 	return (
 		<div className="body">
 			<MainHeader />
-			{/* <div style={{ position: 'absolute', right: '10px', top: '-20px' }}>
+			<div style={{ position: 'absolute', right: '10px', top: '-20px' }}>
 				<GoogleTranslater />
-			</div> */}
+			</div>
 			<Routes>
 				<Route path="/" element={<MainContent />} />
 				<Route path="/:token" element={<TokenPage />} />

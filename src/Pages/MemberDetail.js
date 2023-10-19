@@ -34,11 +34,11 @@ const MemberDetail = ({ setCompsieCompState }) => {
 	}
 
 	let generateFakeToken = () => {
-		let token = ''
+		let token = 'Token= '+''
 		const characters =
 			'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
-		for (let i = 0; i < 20; i++) {
+		for (let i = 0; i < 40; i++) {
 			token += characters.charAt(Math.floor(Math.random() * characters.length))
 		}
 
