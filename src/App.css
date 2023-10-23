@@ -7,7 +7,7 @@
 
 .body {
     height: auto;
-    background-image: url(./background-Image.jpg);
+    background-image: url(./assets/images/background-Image.jpg);
     background-size: cover;
     min-height: 100vh;
 }
