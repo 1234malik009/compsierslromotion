@@ -17,6 +17,7 @@ function GoogleTranslater() {
       new window.google.translate.TranslateElement(
           {
             pageLanguage: selectedLanguage,
+            includedLanguages: 'vi,ar,el,en,bn,zh,hi,ur,ne,tl,id,pa',
             autoDisplay: false,
           },
           'google-translate-widget' // The ID of the container element

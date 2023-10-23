@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
 import {DatePicker, Button, Form, InputNumber, Typography, Card} from "antd";
+import {searchMember, startSession} from "../helper/api";
 
 const SearchMember = ({setCompsieCompState, setMemberData}) => {
-    const handleSubmit = (data) => {
-        const allValues = {
-            mememberNo: data.memberNo,
-            dob: new Date(data.dob).toLocaleString(),
-        };
-        setMemberData(allValues);
-        setCompsieCompState(1);
+    const handleSubmit = async (data) => {
+        const {sessionToken} = await startSession();
+        const result = await searchMember(sessionToken,data.membershipId)
+        console.log(result)
+        // setMemberData(allValues);
+        setCompsieCompState(2);
     };
     return (
         <div>
@@ -35,7 +35,7 @@ const SearchMember = ({setCompsieCompState, setMemberData}) => {
                     <br/>
                     <Form.Item
                         label="Member No"
-                        name="memberNo"
+                        name="membershipId"
                         rules={[
                             {
                                 required: true,
@@ -49,23 +49,23 @@ const SearchMember = ({setCompsieCompState, setMemberData}) => {
                             placeholder="Enter Member No"
                         />
                     </Form.Item>
-                    <Form.Item
-                        label="Date of Birth"
-                        name="dob"
-                        rules={[
-                            {
-                                required: true,
-                                message: "Please choose a Date of Birth",
-                            },
-                        ]}
-                    >
-                        <DatePicker
-                            size={"medium"}
-                            className={"w-100"}
-                            placeholder="DD-MM-YYYY"
-                            format="DD-MM-YYYY"
-                        />
-                    </Form.Item>
+                    {/*<Form.Item*/}
+                    {/*    label="Date of Birth"*/}
+                    {/*    name="dob"*/}
+                    {/*    rules={[*/}
+                    {/*        {*/}
+                    {/*            required: true,*/}
+                    {/*            message: "Please choose a Date of Birth",*/}
+                    {/*        },*/}
+                    {/*    ]}*/}
+                    {/*>*/}
+                    {/*    <DatePicker*/}
+                    {/*        size={"medium"}*/}
+                    {/*        className={"w-100"}*/}
+                    {/*        placeholder="DD-MM-YYYY"*/}
+                    {/*        format="DD-MM-YYYY"*/}
+                    {/*    />*/}
+                    {/*</Form.Item>*/}
                     <Form.Item>
                         <Button
                             className={"btn"}

@@ -8,7 +8,6 @@ const headerStyle = {
   alignItems: "center",
   color: "#fff",
   height: 100,
-  paddingInline: 50,
   lineHeight: "64px",
   backgroundColor: "#0b1e33",
 };

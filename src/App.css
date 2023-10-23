@@ -63,6 +63,7 @@
 .goog-te-gadget {
     color: transparent !important;
     margin-top: 55px !important;
+    margin-right: 35px
 }
 
 .goog-te-combo {
@@ -137,4 +138,15 @@
     justify-content: center;
     min-height: 82vh;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .goog-te-gadget {
+        color: transparent !important;
+        margin-top: 55px !important;
+        margin-right: 10px
+    }
+    .ant-layout-header{
+        padding-inline: 15px;
+    }
 }
