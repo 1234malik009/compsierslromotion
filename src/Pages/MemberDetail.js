@@ -17,7 +17,7 @@ const MemberDetail = ({ setCompsieCompState }) => {
   let navigate = useNavigate();
 
   const handleSubmit = () => {
-    setCompsieCompState(2);
+    setCompsieCompState(3);
   };
 
   let onContinueClick = () => {

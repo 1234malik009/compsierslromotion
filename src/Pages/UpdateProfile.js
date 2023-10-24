@@ -1,9 +1,13 @@
 import { Input, Card, Form, Typography, Button, InputNumber} from "antd";
+import {startSession} from "../helper/api";
 
 const UpdateProfile = ({ setCompsieCompState }) => {
 
-  let updateProfile = (data) => {
-    setCompsieCompState(1)
+  let updateProfile = async (data) => {
+    console.log(data)
+    const {sessionToken} = await startSession();
+    console.log(sessionToken)
+    setCompsieCompState(0)
   }
 
   return (
