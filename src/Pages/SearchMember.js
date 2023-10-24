@@ -4,9 +4,9 @@ import {searchMember, startSession} from "../helper/api";
 
 const SearchMember = ({setCompsieCompState, setMemberData}) => {
     const handleSubmit = async (data) => {
-        const {sessionToken} = await startSession();
-        const result = await searchMember(sessionToken,data.membershipId)
-        console.log(result)
+        //const {sessionToken} = await startSession();
+        //const result = await searchMember(sessionToken,data.membershipId)
+        //console.log(result)
         // setMemberData(allValues);
         setCompsieCompState(2);
     };
