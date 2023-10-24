@@ -44,9 +44,8 @@ const MainContent = () => {
 
                     {compsieCompState === 0 ? (
                         <Button onClick={() => setCompsieCompState(1)}
-                                style={{marginTop: '10px', maxWidth: '250px', width: '100%'}} y type={"primary"}
-                                size={'large'} className={'text-black'}>Start
-                            Now</Button>
+                                style={{marginTop: '10px', maxWidth: '250px',width: '100%', height: '42px'}} type={"primary"}
+                                size={'large'} className={'text-black'}>Search Member</Button>
                     ) : compsieCompState === 1 ? (
                         <SearchMember
                             setCompsieCompState={setCompsieCompState}
