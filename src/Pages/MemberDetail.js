@@ -30,7 +30,6 @@ const MemberDetail = ({ setCompsieCompState }) => {
 		localStorage.removeItem('token')
 		localStorage.setItem('token', JSON.stringify(tokenData))
 		navigate("/"+token)
-
 	}
 
 	let generateFakeToken = () => {

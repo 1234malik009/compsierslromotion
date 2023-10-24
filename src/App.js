@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import MainContent from './Theme/MainContent'
-import MainHeader from './MainHeader'
+import MainHeader from './Theme/MainHeader'
 // import GoogleTranslater from './components/GoogleTranslator'
 import { Route, Routes } from 'react-router-dom'
 import TokenPage from './Pages/TokenPage'
