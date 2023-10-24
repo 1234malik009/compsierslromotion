@@ -1,11 +1,12 @@
 import React from 'react'
-import expire from '../assets/images/401_unautrized.svg'
-import { Link } from 'react-router-dom'
-import { Button } from 'antd'
-function TokenExpiredPage() {
+import notFound from '../assets/images/404-error.svg'
+import { Button } from 'antd';
+import { Link } from 'react-router-dom';
+
+function NotFound() {
 	return (
 		<div className="space__custom">
-			<img src={expire} style={{ maxWidth: '450px' }} alt="" />
+			<img src={notFound} style={{ maxWidth: '450px' }} alt="" />
 			<Button  className={"btn"}
                             size={"medium"}
                             type="primary"
@@ -15,4 +16,4 @@ function TokenExpiredPage() {
 	)
 }
 
-export default TokenExpiredPage
+export default NotFound

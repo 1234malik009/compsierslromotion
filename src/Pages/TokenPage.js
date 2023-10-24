@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, Navigate, useNavigate } from 'react-router-dom'
+import React, { useEffect} from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+// import {Button} from 'antd'
+import TokenImage from '../assets/images/TokenImage.png'
+import { Typography } from 'antd';
 
 function TokenPage() {
 	const navigate = useNavigate()
@@ -29,8 +32,10 @@ function TokenPage() {
 	}, [])
 
 	return (
-		<div>
-			<h2 className="text-white">Token Page{paramToken}</h2>
+		<div className="space__custom">
+		<img src={TokenImage} style={{ maxWidth: '300px' }} alt="" ></img>
+			<Typography.Title className='text-slab text-center' level={1} >Your Token is -:{paramToken}</Typography.Title>
+			
 		</div>
 	)
 }

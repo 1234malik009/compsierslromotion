@@ -1,4 +1,4 @@
-import { Input, Card, Form, Typography, Button, InputNumber, Row } from "antd";
+import { Input, Card, Form, Typography, Button, InputNumber} from "antd";
 
 const UpdateProfile = ({ setCompsieCompState }) => {
 

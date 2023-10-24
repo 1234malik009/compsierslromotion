@@ -7,7 +7,7 @@
 
 .body {
     height: auto;
-    background-image: url(./background-Image.jpg);
+    background-image: url(./assets/images/background-Image.jpg);
     background-size: cover;
     min-height: 100vh;
 }
@@ -113,9 +113,9 @@
 .text-left{
     text-align: left !important;
 }
-/* .text-center {
+.text-center {
   text-align: center !important;
-} */
+}
 .ant-row {
     margin-top: 10px !important;
 }
@@ -130,4 +130,11 @@
 .fs-18 {
     font-size: 17px !important;
     text-align: start !important;
+}
+.space__custom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 82vh;
+    flex-direction: column;
 }
