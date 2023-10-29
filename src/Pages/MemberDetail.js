@@ -3,14 +3,14 @@ import { Button, Card, Col, Row, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const memberData = {
-  name: "Brad Waston",
-  cardNo: "123456789",
+  first_name: "Brad",
+  last_name: "Waston",
   gander: "male/female",
   phoneNo: "07878787878",
-  dateOfBirth: "1976-12-27",
+  dateOfBirth: "13-11-1995",
   memberShipNo: "12345678",
-  date_registered: "2021-03-20",
-  expiry_date:"2021-03-20"
+  date_registered: "123 Smith St, Campsie",
+  expiry_date:"19-05-2024"
 };
 
 const MemberDetail = ({ setCompsieCompState }) => {
@@ -52,16 +52,16 @@ const MemberDetail = ({ setCompsieCompState }) => {
         >
           <Typography.Title
             className={"text-play"}
-            style={{ textAlign: "left", marginBlock: "0px" }}
+            style={{ textAlign: "left", fontSize: '30px', marginBlock: "0px" }}
           >
-            Profile Detail
+            Please check your contact details to confirm they are upto date.
           </Typography.Title>
-          <Typography.Text
+          {/* <Typography.Text
             className={"text-slab"}
             style={{ textAlign: "left", display: "block", fontSize: "20px" }}
           >
             Verify your profile & procced to continue
-          </Typography.Text>
+          </Typography.Text> */}
           <Card bordered={false} bodyStyle={{ padding: "0px" }}>
             <Row>
               <Col xs={24} md={12}>
@@ -71,12 +71,12 @@ const MemberDetail = ({ setCompsieCompState }) => {
                       level={4}
                       className="text-white text-play fs-18"
                     >
-                      Name:
+                      First Name:
                     </Typography.Title>
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.name}
+                      {memberData.first_name}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -105,12 +105,12 @@ const MemberDetail = ({ setCompsieCompState }) => {
                       level={4}
                       className="text-white text-play fs-18"
                     >
-                      Card No:
+                      Last Name:
                     </Typography.Title>
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.cardNo}
+                      {memberData.last_name}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -139,7 +139,7 @@ const MemberDetail = ({ setCompsieCompState }) => {
                       level={4}
                       className="text-white text-play fs-18"
                     >
-                      Phone No:
+                      Mobile No:
                     </Typography.Title>
                   </Col>
                   <Col xs={12} className={"text-left"}>
@@ -156,7 +156,7 @@ const MemberDetail = ({ setCompsieCompState }) => {
                       level={4}
                       className="text-white text-play fs-18"
                     >
-                      Date Registered:
+                      Address:
                     </Typography.Title>
                   </Col>
                   <Col xs={12} className={"text-left"}>
@@ -190,7 +190,7 @@ const MemberDetail = ({ setCompsieCompState }) => {
                       level={4}
                       className="text-white text-play fs-18"
                     >
-                      Expiry Date:
+                      Date Registered:
                     </Typography.Title>
                   </Col>
                   <Col xs={12} className={"text-left"}>
@@ -213,17 +213,17 @@ const MemberDetail = ({ setCompsieCompState }) => {
                 onClick={handleSubmit}
               >
                 {" "}
-                Update Profile
+                Review & Update details
               </Button>
-              <Button
+              {/* <Button
                 onClick={onContinueClick}
                 style={{ margin: "2px" }}
                 className={"text-black"}
                 type="primary"
                 htmlType="submit"
               >
-                Enter Promo
-              </Button>
+                Enter Promotion
+              </Button> */}
             </div>
           </Card>
         </Card>

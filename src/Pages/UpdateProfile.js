@@ -19,7 +19,7 @@ const UpdateProfile = ({ setCompsieCompState }) => {
         <Form onFinish={updateProfile} layout="vertical">
           <Typography.Title
             className={"text-play"}
-            style={{ textAlign: "left" }}
+            style={{ textAlign: "left", fontSize: '30px'}}
           >
             Update Your Profile
           </Typography.Title>
@@ -47,16 +47,16 @@ const UpdateProfile = ({ setCompsieCompState }) => {
               />
             </Form.Item>
             <Form.Item
-              label="Phone No"
+              label="Mobile No"
               name="phoneNo"
               rules={[
-                { required: true, message: "Please input your phone number!" },
+                { required: true, message: "Please input your mobile number!" },
               ]}
             >
               <InputNumber
                 size="medium"
                 className="w-100"
-                placeholder="Phone No"
+                placeholder="Mobile No"
                 type="number"
               />
             </Form.Item>
@@ -80,7 +80,7 @@ const UpdateProfile = ({ setCompsieCompState }) => {
               htmlType="submit"
               style={{ marginTop: "10px" }}
             >
-              Update Profile
+              Enter Promo
             </Button>
           </div>
         </Form>

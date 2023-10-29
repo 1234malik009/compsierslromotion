@@ -22,14 +22,14 @@ const SearchMember = ({setCompsieCompState, setMemberData}) => {
                     onFinish={handleSubmit}
                     style={{marginTop: "20px", textAlign: "start"}}
                 >
-                    <Typography.Title style={{marginBlock: 0}} className="text-slab">
-                        Search Member
+                    <Typography.Title style={{marginBlock: 0, fontSize: "22px"}} className="text-slab">
+                        Now let us find you.
                     </Typography.Title>
                     <Typography.Text
                         style={{fontSize: "17px"}}
                         className={"text-inter"}
                     >
-                        Firstly, search your profile using Member No and DOB.
+                        Please enter your club membership number.
                     </Typography.Text>
                     <br/>
                     <br/>

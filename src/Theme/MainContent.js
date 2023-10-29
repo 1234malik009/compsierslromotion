@@ -27,12 +27,11 @@ const MainContent = () => {
         >
             <Layout>
                 <Content style={contentStyle}>
-                    <Image
+                    {compsieCompState === 0 && <Image
                         className="banner-image"
-                        src={require('../Banner.jpg')}
-                        height={'100%'}
-                        style={{marginTop: '50px'}}
-                    />
+                        src={require('../main.jpg')}
+                        style={{width: '95%', height: '330px', marginTop: '50px'}}
+                    />}
 
                     <Typography.Title level={1} className={'hero__title text-play'}>
                         CAMPSIE RSL
@@ -44,8 +43,8 @@ const MainContent = () => {
 
                     {compsieCompState === 0 ? (
                         <Button onClick={() => setCompsieCompState(1)}
-                                style={{marginTop: '10px', maxWidth: '250px',width: '100%', height: '42px'}} type={"primary"}
-                                size={'large'} className={'text-black'}>Search Member</Button>
+                                style={{marginTop: '10px', maxWidth: '250px',width: '100%', height: '42px', color: 'white'}} type={"primary"}
+                                size={'large'} className={'btn'}>Enter</Button>
                     ) : compsieCompState === 1 ? (
                         <SearchMember
                             setCompsieCompState={setCompsieCompState}

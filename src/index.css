@@ -57,6 +57,9 @@ code {
 .text-black{
     color: #000 !important;
 }
+.banner-image {
+    width: 600px;
+}
 label{
     font-family: 'Inter', sans-serif !important;
 }
