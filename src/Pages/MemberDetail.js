@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
+import {maskPhoneNumber} from "../helper/api";
 
 // const memberData = {
 //   first_name: "Brad",
@@ -43,6 +44,7 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
     return token;
   };
 
+  console.log(memberData)
   return (
     <div className="App">
       <div className="mamber-detail">
@@ -76,7 +78,7 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.first_name}
+                      {memberData.firstName}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -93,7 +95,7 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.memberShipNo}
+                      {memberData.cardNumber}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -110,7 +112,7 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.last_name}
+                      {memberData.lastName}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -127,7 +129,7 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.gander}
+                      {memberData.gender}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -144,7 +146,8 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.phoneNo}
+
+                      {maskPhoneNumber(memberData.mobilePhone || memberData.telephone)}
                     </Typography.Text>
                   </Col>
                 </Row>
@@ -195,7 +198,7 @@ const MemberDetail = ({ setCompsieCompState, memberData }) => {
                   </Col>
                   <Col xs={12} className={"text-left"}>
                     <Typography.Text className="text-green text-inter fs-19">
-                      {memberData.expiry_date}
+                      {memberData?.dateFirstRegistered}
                     </Typography.Text>
                   </Col>
                 </Row>

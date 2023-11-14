@@ -1,79 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, InputNumber, Typography, Card } from "antd";
-import { searchMember, startSession } from "../helper/api";
+import {getMemberDetails, getToken, searchMember, startSession} from "../helper/api";
 import axios from "axios";
 
 const SearchMember = ({ setCompsieCompState, setMemberData }) => {
   const callSearchMemberAPI = async (values) => {
+    console.log(values)
     try {
-      const sessionToken = await getSessionToken();
-      const memberData = await getMemberDetails(sessionToken, values.membershipId);
-
-      console.log(memberData);
-
-      setCompsieCompState(2);
+      const token = await getToken();
+      const memberDetails = await getMemberDetails(token, values.membershipId);
+      setMemberData(memberDetails)
+      setCompsieCompState(2)
+      // Use the member details in your component logic
     } catch (error) {
-      console.error("Error during API calls", error);
+      console.error('Error fetching member details:', error.message);
     }
   };
 
-  const getSessionToken = async () => {
-    const url = "http://14.200.178.102:44000";
-    const headers = new Headers();
-    headers.append("Content-Type", "application/json");
-    headers.append("Accept", "application/json");
 
-    const raw = JSON.stringify({
-      registrationCode: "FEE272F8D227CAA9",
-      userId: "OUTACAMP",
-      webPassword: "A27983B0169A7337",
-    });
 
-    const requestOptions = {
-      method: "POST",
-      headers: headers,
-      body: raw,
-      redirect: "follow",
-    };
-
-    const response = await axios(url + "/api/session/startWebSession", requestOptions);
-    const result = await response.json();
-    
-    if (!response.ok) {
-      throw new Error(`Failed to start session: ${result.error || response.statusText}`);
-    }
-
-    headers.append("Authorization", `Bearer ${result.sessionToken}`);
-    return result.sessionToken;
-  };
-
-  const getMemberDetails = async (sessionToken, memberNo) => {
-    const url = "http://14.200.178.102:44000";
-    const headers = new Headers();
-    headers.append("Content-Type", "application/json");
-    headers.append("Accept", "application/json");
-    headers.append("Authorization", `Bearer ${sessionToken}`);
-
-    const raw = JSON.stringify({
-      membershipId: memberNo,
-    });
-
-    const requestOptions = {
-      method: "POST",
-      headers: headers,
-      body: raw,
-      redirect: "follow",
-    };
-
-    const response = await axios(url + "/api/pos/getFullMemberDetails", requestOptions);
-    const result = await response.json();
-
-    if (!response.ok) {
-      throw new Error(`Failed to get member details: ${result.error || response.statusText}`);
-    }
-
-    return result;
-  };
 
   return (
     <div>
