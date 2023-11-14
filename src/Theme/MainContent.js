@@ -51,7 +51,7 @@ const MainContent = () => {
                             setMemberData={setMemberData}
                         />
                     ) : compsieCompState === 2 ? (
-                        <MemberDetail setCompsieCompState={setCompsieCompState}/>
+                        <MemberDetail memberData={memberData} setCompsieCompState={setCompsieCompState}/>
                     ) : <UpdateProfile setCompsieCompState={setCompsieCompState}/>}
                 </Content>
             </Layout>

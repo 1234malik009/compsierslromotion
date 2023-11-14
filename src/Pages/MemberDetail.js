@@ -2,18 +2,18 @@ import React from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
-const memberData = {
-  first_name: "Brad",
-  last_name: "Waston",
-  gander: "male/female",
-  phoneNo: "07878787878",
-  dateOfBirth: "13-11-1995",
-  memberShipNo: "12345678",
-  date_registered: "123 Smith St, Campsie",
-  expiry_date:"19-05-2024"
-};
+// const memberData = {
+//   first_name: "Brad",
+//   last_name: "Waston",
+//   gander: "male/female",
+//   phoneNo: "07878787878",
+//   dateOfBirth: "13-11-1995",
+//   memberShipNo: "12345678",
+//   date_registered: "123 Smith St, Campsie",
+//   expiry_date:"19-05-2024"
+// };
 
-const MemberDetail = ({ setCompsieCompState }) => {
+const MemberDetail = ({ setCompsieCompState, memberData }) => {
   let navigate = useNavigate();
 
   const handleSubmit = () => {
