@@ -17,9 +17,6 @@ const SearchMember = ({ setCompsieCompState, setMemberData }) => {
     }
   };
 
-
-
-
   return (
     <div>
       <Card style={{ maxWidth: "750px", marginInline: "auto" }} bordered={false}>
