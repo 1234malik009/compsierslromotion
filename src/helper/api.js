@@ -92,11 +92,8 @@ export const getMemberDetails = async (sessionToken, memberNo) => {
         }
 
     } catch (error) {
-       if(error && error.response){
-           message.error(error.response.data.message)
-       }
         console.error('Error fetching member details:', error.message);
-        throw error;
+        return error;
     }
 };
 

@@ -1,19 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { Button, Form, InputNumber, Typography, Card } from "antd";
-import {getMemberDetails, getToken, searchMember, startSession} from "../helper/api";
-import axios from "axios";
+import React, { useState } from "react";
+import { Button, Form, InputNumber, Typography, Card, message, DatePicker } from "antd";
+import {getMemberDetails, getToken} from "../helper/api";
+import dayjs from "dayjs";
 
 const SearchMember = ({ setCompsieCompState, setMemberData }) => {
+
+  let [loading, setLoading] = useState(false)
+
   const callSearchMemberAPI = async (values) => {
-    console.log(values)
+    let dateOfBrith = values['dateOfBirth'].format("YYYY-MM-DD")
+    setLoading(true)
     try {
       const token = await getToken();
-      const memberDetails = await getMemberDetails(token, values.membershipId);
-      setMemberData(memberDetails)
-      setCompsieCompState(2)
-      // Use the member details in your component logic
+      const data = await getMemberDetails(token, values.membershipId);
+      if(data.code == 50000){
+        message.error("No Member Found")
+      }else if(data.dateOfBirth != dateOfBrith){
+        message.error("No Member Found")
+      }else{
+        setMemberData(data)
+        setCompsieCompState(2)
+      }
+      setLoading(false)
     } catch (error) {
-      console.error('Error fetching member details:', error.message);
+      setLoading(false)
+      console.log(error)
+      message.error("Unable to fetch member details")
     }
   };
 
@@ -41,8 +53,20 @@ const SearchMember = ({ setCompsieCompState, setMemberData }) => {
           >
             <InputNumber size={"medium"} className={"w-100"} placeholder="Enter Member No" />
           </Form.Item>
+          <Form.Item
+            label="Date of Birth"
+            name="dateOfBirth"
+            rules={[
+              {
+                required: true,
+                message: "Please enter date Of Birth",
+              },
+            ]}
+          >
+            <DatePicker size={"medium"} className={"w-100"} placeholder="Enter date Of Birth" />
+          </Form.Item>
           <Form.Item>
-            <Button className={"btn"} size={"medium"} type="primary" htmlType="submit" style={{ textAlign: "center" }}>
+            <Button className={"btn"} size={"medium"} type="primary" htmlType="submit" loading={loading} style={{ textAlign: "center" }}>
               Search
             </Button>
           </Form.Item>
