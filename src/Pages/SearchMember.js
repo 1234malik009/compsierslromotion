@@ -15,7 +15,7 @@ const SearchMember = ({ setCompsieCompState, setMemberData }) => {
       const data = await getMemberDetails(token, values.membershipId);
       if(data.code == 50000){
         message.error("No Member Found")
-      }else if(data.dateOfBirth != dateOfBrith){
+      }else if(data.dateOfBirth != dateOfBrith || data.dateOfBirth == null || data.dateOfBirth == ""){
         message.error("No Member Found")
       }else{
         setMemberData(data)
